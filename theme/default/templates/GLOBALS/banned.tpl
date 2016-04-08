@@ -1,0 +1,1 @@
+<div style="top: 35%;left: 35%;filter: alpha(opacity=80);-moz-opacity: .80;opacity: .80;position: absolute;z-index: 11;padding: 2px;border: 1px solid #CECECE;background-color: #CCCC00;padding: 10px;font: 14px 'Lucida Grande', verdana, helvetica, arial, sans-serif;"><strong>{body}</strong><br /><br />[Banned by {by} {6365}]<br/>[Active until {expire} {6370}]</div>

@@ -1,0 +1,1 @@
+<a href="?L=chat.chat">Click here</a> 

@@ -1,0 +1,24 @@
+/* 
+				BYTES ORGANISATION
+				ITEM        |  BYTE  |  END  |  LEN  |   CAST   |
+HANDLED			topic       |  0     |  254  |  255  |  string  |        topic block
+				mode_a		|  256   |  256  |  1    |  bool    |  a  >  anonymous operators (will not show operators)
+				mode_A      |  257   |  257  |  1    |  bool    |  A  >  admins only (only administrators can join)
+HANDLED			mode_c      |  258   |  258  |  1    |  bool    |  c  >  no colors are shown on this channel
+HANDLED			mode_G      |  259   |  259  |  1    |  bool    |  G  >  strip bad words
+				mode_i      |  260   |  260  |  1    |  bool    |  i  >  invite only
+				mode_k      |  262   |  277  |  16   |  string  |  k  >  key lock
+				mode_l      |  278   |  278  |  8    |  int     |  l  >  users limit
+HANDLED			mode_m      |  292   |  293  |  1    |  bool    |  m  >  moderated
+				mode_n      |  294   |  295  |  1    |  bool    |  n  >  no external messages
+				mode_N      |  296   |  297  |  1    |  bool    |  N  >  only users from the same server node can join
+				mode_O      |  298   |  299  |  1    |  bool    |  O  >  operators only (only allow irc moderators to join)
+				mode_P      |  300   |  301  |  1    |  bool    |  P  >  only users with a picture can join
+				mode_q      |  302   |  303  |  1    |  bool    |  q  >  quiet mode (will not show system messages)
+				mode_Q      |  303   |  2055 |  1    |  bool    |  Q  >  kick are not allowed in the channel
+				mode_r      |  2056  |  2057 |  1    |  bool    |  r  >  channel is registered
+				mode_s      |  2058  |  2059 |  1    |  bool    |  s  >  secret (channel does not appear in lists)
+HANDLED			mode_t      |  2060  |  2061 |  1    |  bool    |  t  >  topic lock
+				mode_T      |  3091  |  3092 |  1    |  bool    |  T  >  takeover mode (only IRCops can change channel modes)
+HANDLED			users       |  3093  |  7189 |  4096 |  string  |        users list block
+			*/

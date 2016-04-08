@@ -1,0 +1,768 @@
+1:GLOBAL:Yes
+5:GLOBAL:Edit
+10:GLOBAL:Delete
+15:GLOBAL:Title:
+20:GLOBAL:Body:
+25:GLOBAL:Positive
+30:GLOBAL:Neutral
+35:GLOBAL:Negative
+40:GLOBAL:Your comment has been successfully posted
+45:GLOBAL:Sorry, guests can not post comments
+50:GLOBAL:Register
+55:GLOBAL:January
+60:GLOBAL:February
+65:GLOBAL:March
+70:GLOBAL:April
+75:GLOBAL:May
+80:GLOBAL:June
+85:GLOBAL:July
+90:GLOBAL:August
+95:GLOBAL:September
+100:GLOBAL:October
+105:GLOBAL:November
+110:GLOBAL:December
+115:GLOBAL:{user.username}'s profile
+120:GLOBAL:{user.username}'s gallery
+125:GLOBAL:My Picture
+130:GLOBAL:Spacer
+135:GLOBAL:Date
+140:GLOBAL:Icon
+145:GLOBAL:Bullet
+150:GLOBAL:Picture
+155:GLOBAL:Successful!
+160:GLOBAL:Error!
+165:GLOBAL:At least one word
+170:GLOBAL:All the words
+175:GLOBAL:As a phrase
+177:GLOBAL:Only show
+180:GLOBAL:Advanced
+185:GLOBAL:Search in
+190:GLOBAL:Articles Title
+193:GLOBAL:Articles Topic
+195:GLOBAL:Article Body
+200:GLOBAL:Relevance
+205:GLOBAL:Article date
+210:GLOBAL:Most viewed
+215:GLOBAL:Most commented
+220:GLOBAL:Order by
+225:GLOBAL:Direction
+230:GLOBAL:Ascending
+235:GLOBAL:Descending
+240:GLOBAL:Your Search Results
+245:GLOBAL:Read this article
+250:GLOBAL:User's blog
+255:GLOBAL:Back
+260:GLOBAL:Next
+265:GLOBAL:My Saved Searches
+270:GLOBAL:Make your searching faster and easier by saving your searches for a one click operation.
+275:GLOBAL:Popular Searches
+280:GLOBAL:Sorry your search produced no result
+283:GLOBAL:Your search produced {count.total} results
+285:GLOBAL:Write blog articles
+290:GLOBAL:Add to my favorite blogs
+295:GLOBAL:Submit
+300:GLOBAL:Search
+305:GLOBAL:Register
+310:GLOBAL:Prev
+315:GLOBAL:Success!
+320:GLOBAL:My Desktop
+325:GLOBAL:{user.username}'s profile
+330:GLOBAL:Blocked!
+335:GLOBAL:Create
+340:GLOBAL:No
+345:GLOBAL:My Contacts
+350:GLOBAL:Calendar
+355:GLOBAL:profile
+360:GLOBAL:blog
+365:GLOBAL:gallery
+370:GLOBAL:comments
+375:GLOBAL:message
+380:GLOBAL:page
+385:GLOBAL:file
+390:GLOBAL:Block
+395:GLOBAL:Delete from contacts
+400:GLOBAL:Name
+405:GLOBAL:Sorry guests can't access this page.
+410:GLOBAL:{notification.gender}, {notification.age} years old
+415:GLOBAL:Add
+420:GLOBAL:Dismiss!
+425:GLOBAL:Online
+430:GLOBAL:Gender:
+435:GLOBAL:Age:
+440:GLOBAL:Location: {city} {state} {country}
+445:GLOBAL:Profile
+450:GLOBAL:Page
+455:GLOBAL:Gallery
+460:GLOBAL:Blog
+465:GLOBAL:Send a file
+470:GLOBAL:Move to
+475:GLOBAL:Remove
+480:GLOBAL:Upload Photo:
+485:GLOBAL:Browse:
+490:GLOBAL:My Calendar
+495:GLOBAL:Event
+500:GLOBAL:Comments
+505:GLOBAL:Actions
+510:GLOBAL:Join
+520:GLOBAL:Get file
+525:GLOBAL:My Inbox
+530:GLOBAL:My Profile
+535:GLOBAL:To:
+540:GLOBAL:Message:
+545:GLOBAL:Topic
+550:GLOBAL:User
+555:GLOBAL:Replies
+560:GLOBAL:Back to Index
+565:GLOBAL:Views
+570:GLOBAL:Last Post
+575:GLOBAL:Reply
+580:GLOBAL:Post a reply
+585:GLOBAL:Send
+590:GLOBAL:OoPs!
+595:GLOBAL:Subject:
+600:GLOBAL:With selected...
+605:GLOBAL:Move all selected mails to {dropdownMailbox.name} 
+610:GLOBAL:Delete all selected mails
+615:GLOBAL:Report as spam
+620:GLOBAL:Report as abuse
+625:GLOBAL:Ok
+630:GLOBAL:Sorry you have to be logged in in order to access this page.
+635:GLOBAL:Flood Control
+640:GLOBAL:Save
+645:GLOBAL:Upload Pictures
+650:GLOBAL:Manage Pictures
+655:GLOBAL:Description
+660:GLOBAL:Users with a picture
+665:GLOBAL:Online users
+670:GLOBAL:With age between
+675:GLOBAL:and
+680:GLOBAL:years old
+685:GLOBAL:Within a range of
+690:GLOBAL:miles
+695:GLOBAL:kilometers
+700:GLOBAL:Advanced
+705:GLOBAL:Search in
+710:GLOBAL:Usernames
+715:GLOBAL:City
+720:GLOBAL:State
+725:GLOBAL:Country
+727:GLOBAL:Zipcode
+730:GLOBAL:User quote
+735:GLOBAL:User header
+740:GLOBAL:Profile data
+745:GLOBAL:Username
+750:GLOBAL:Last login
+755:GLOBAL:Online/Offline
+760:GLOBAL:Registration date
+765:GLOBAL:Age
+770:GLOBAL:My Gallery
+775:GLOBAL:Upload
+780:GLOBAL:Manage
+785:GLOBAL:My Events
+790:GLOBAL:My Desktop
+795:GLOBAL:Myself
+
+
+1005:blogs.blog:Welcome on my blog!
+1010:blogs.blog:{user.username} wrote {count.articles} articles and got {count.comments} comments. The last article was submitted on {count.lastarticle}
+1015:blogs.blog:Latest blog article
+1020:blogs.blog:Blog article by {user.username}
+1035:blogs.blog:Comments on this blog article
+1040:blogs.blog:Sorry there is no comment on this blog article yet. Would you like to be the first one to write a comment?
+1045:blogs.blog:Drop your comment for this article
+1050:blogs.blog:Sorry this user has no blog article.
+1055:blogs.blog:More articles
+1060:blogs.blog:Would you like to read more articles written by {user.username}? Here are the latest posts.
+1065:blogs.blog:Sorry {user.username} doesn't have any other blog articles
+1070:blogs.blog:Search my blog
+1075:blogs.blog:Browse all blogs
+1080:blogs.blog:Archived articles
+1085:blogs.browse:Last 20 blog articles
+1090:blogs.browse:Searching for the latest blogs posted on {siteName}? Check out the last 20 blogs submitted by {siteName} members.
+1095:blogs.browse:Write an article
+2000:blogs.browse:My Blog
+2015:blogs.browse:Search for blogs!
+2020:blogs.browse:Last 100 titles
+2025:blogs.edit:Edit blog article
+2030:blogs.edit:Sorry there has been an error trying to update your blog article. Either the title or the body was empty.
+2035:blogs.edit:Edit your article below
+2040:blogs.edit:Sorry, you can not edit this blog article; it must belong to another user.
+2030:blogs.edit:Your blog article has been successfully updated
+2035:blogs.search:Search Blogs 
+2040:blogs.search:Looking for a particular subject or topic? Use our search to find exactly what you are looking for. 
+2045:blogs.search:Your search produced {count.total} results
+2046:blogs.search:Sorry your search produced no result
+2050:blogs.write:Blogs offer you a chance to have your voice heard on the internet. It can be a place to organize your thoughts, share interesting stories, write a living diary for all to see, or just share what is on your mind. Connect with other like-minded individuals today!
+2060:blogs.write:Your blog article has been successfully added. You may write another blog article or you may click below to view this new article!
+2065:blogs.write:View this blog article
+2070:blogs.write:Sorry there has been an error trying to save your blog article. Either the title or the body was empty.
+2075:blogs.write:My Article Title 
+2080:blogs.write:Click here to write your article
+2085:blogs.write:Sorry, guests can't post blog articles.
+2090:chat.browser:Picture {browse.thisID} out of {browse.total}
+2095:chat.chatroom:Chat window detached, you can now browse the site using that window!
+3000:chat.chatroom:Debug
+3005:chat.chatroom:DO NOT REPORT!
+3010:chat.chatroom:Clear
+3015:chat.chatroom:With selected user ...
+3020:chat.chatroom:Slap
+3025:chat.chatroom:Kiss
+3030:chat.chatroom:Beat
+3035:chat.chatroom:x
+3040:chat.dac:said:
+3045:chat.dac:whisper:
+3050:chat.dac:wallop:
+3055:chat.dac:users in this channel
+3060:chat.dac:total users
+3065:chat.dac:{user.gender}, {user.age}y
+3070:chat.index:Chatrooms
+3075:chat.index:Welcome to {siteName}'s chatroom, and please make yourself at home! The list of available chat rooms are listed below, and be sure to check out the help on the top right hand corner to understand the commands available to you in the chatroom. Have fun!
+3085:chat.index:Chatrooms list ...
+3090:chat.index:General
+3095:chat.index:Create a chatroom
+4000:comments.usercomments:{user.username}'s profile comments
+4005:comments.usercomments:{user.username} has written {count.sent} comments on members profiles, and has receive {count.received} comments. See what others are saying about {user.username} and what {user.username} is saying to {siteName} members!
+4010:comments.usercomments:{user.username}'s profile
+4015:comments.usercomments:Received
+4020:comments.usercomments:Comments left for {user.username}
+4025:comments.usercomments:Sent
+4030:comments.usercomments:Comments submitted by {user.username} for other users
+4035:comments.usercomments:{comment.date} | Left for {comment.username} 
+4040:contacts.addusers:Add {user.username} to your contacts 
+4045:contacts.addusers:Adding a user to your contacts list helps you stay in touch! You will get a shortcut to this user's profile on your desktop, get special notifications about him/her, and, if a shared connection relationship is established, you both will have a special access to each others private options!
+4050:contacts.addusers:Congratulations, you successfully addded {user.username} to your contacts groups!
+4055:contacts.addusers:Sorry you can not add somebody you blocked. You must unblock {user.username} before you try adding him/her to your contacts
+4060:contacts.addusers:Cloning?!
+4065:contacts.addusers:Sorry, you can not add the same user twice in your contacts list
+4070:contacts.addusers:Talking to yourself? 
+4075:contacts.addusers:Sorry, you can not add yourself to your own contacts list! 
+4080:contacts.addusers:No user specified
+4085:contacts.addusers:Sorry, no user ID has been specified
+4090:contacts.addusers:Pick a group!
+4095:contacts.addusers:Select a group into which you would like to add {user.username} 
+5000:contacts.addusers:Add to group
+5005:contacts.addusers:Please create a group
+5010:contacts.addusers:You do NOT have any group created yet, you have to create a group before you can add {user.username} to your contacts list. Please create a group using the group tool below.
+5015:contacts.addusers:Create new contacts groups 
+5020:contacts.addusers:Congratulations! You successfully created a contact group!
+5025:contacts.addusers:Sorry, the group name you specified was blank or had invalid characters in it. Please start over
+5030:contacts.addusers:Sorry, the group you wanted to create already exist in your contacts groups list 
+5035:contacts.addusers:Would you like to create new contacts groups?
+5040:contacts.addusers:Would you like to read more articles from {user.username}? Here are the last 10 articles posted by the same user 
+5045:contacts.block:Block user {user.username} 
+5050:contacts.block:No user has been specified. You can not block yourself. User already blocked.
+5055:contacts.block:You are about to block a user and will not receive any further communications from this user. Would you like to proceed?
+5060:contacts.block:User is now blocked
+5065:contacts.contacts:The My Contacts section offers more then a list of people you want a shortcut for. Performing a shared connection, or relationship, between you and another member allows both of you to access each other's private pictures, notifications, SMS, and much more. 
+5070:contacts.contacts:You have {g.contacts} contact(s) in {g.groups} group(s) 
+5075:contacts.contacts:Please pick a contact from the list on the right
+5080:contacts.contacts:{user.age} years old
+5085:contacts.contacts:Location:
+5090:contacts.contacts:In group:
+5095:contacts.contacts:View {user.username}'s ...
+6000:contacts.contacts:Send {user.username} a ...
+6005:contacts.contacts:Group change saved successfully!
+6010:contacts.contacts:Manage Contacts Groups 
+6015:contacts.contacts:Manage Groups
+6020:contacts.contacts:New Requests
+6025:contacts.contacts:The following users added you to their contacts lists, would you like to add them to yours? 
+6040:contacts.contacts:, {list.gender}, {list.age}y {list.online}
+6045:contacts.contacts:In group {list.group}
+6050:contacts.contacts:Create Groups
+6055:contacts.unblock:UnBlock user {user.username}
+6060:contacts.unblock:No user has been specified.
+6065:contacts.unblock:You can not unblock yourself.
+6070:contacts.unblock:User is not blocked.
+6075:contacts.unblock:You are about to unblock a user. If you do so, you may receive communications from this user. Would you like to proceed?
+6080:contacts.unblock:User is not blocked anymore
+6085:events.create:Create a new event
+6090:events.create:Want to tell {siteName} members about a party or special event? Get off to a great start by posting all related news about your event today!
+6095:events.create:My Calendar 
+6100:events.create:Today's Events 
+6105:events.create:Your Event has been added to the events calendar. Would you like to add another event? 
+6110:events.create:View event listing
+6115:events.create:Sorry, you can not set an event to be attended on a past date. Please start over 
+6120:events.create:Either the title or the description field has been left empty, you must set a title and a description
+6125:events.create:Event details
+6130:events.create:Event Title:
+6135:events.create:Description:
+6140:events.create:Show to:
+6145:events.create:Me
+6150:events.create:My Contacts
+6155:events.create:Allthe users
+6160:events.create:Date:
+6165:events.create:Starts at:
+6170:events.create:Location:
+6175:events.create:Sorry, guests can not create events
+6180:events.daily:Events on {day.month} {day.date.jS}
+6185:events.daily:Here are the events scheduled for today by {siteName} members. Break away from your normal routine and enjoy meeting new people by attending an event near you!
+6190:events.daily:Events Today
+6195:events.daily:Events list for the day
+6200:events.daily:Event Details
+6205:events.daily:Sorry there is no event on that day 
+6210:events.daily:Next Events
+6215:events.daily:Here are the events for the next 3 months.
+6220:events.daily:Next 20 events
+6225:events.daily:Create an event
+6230:events.event:Event Details
+6235:events.event:Go ahead and have some fun! Have someone you would like to share this event with? Use the refer to a friend option to share the excitement with them!
+6240:events.event:Events Today
+6245:events.event:Event Picture
+6250:events.event:Created by {event.username} on {event.creationDate}
+6255:events.event:Event location: {event.location}
+6260:events.event:Sorry there is no comment on this event yet. Would you like to be the first one to write a comment?
+6265:events.event:Drop your comment for this event
+6270:events.event:Tell a friend about this event
+6275:GLOBALS.lane.chat_notify:{chat.nickname} triggered your notification on this word: {chat.word} 
+6280:GLOBALS.lane.chat_talk:{chat.nickname} is talking about you in channel {chat.channel}
+6285:GLOBALS.lane.file:{user.username} shared a file with you
+6290:GLOBALS.lane.new_mail:You got a new mail from
+6295:GLOBALS.lane.new_nudge:You got nudged by
+6300:GLOBALS.lane.new_nudge:Nudge
+6305:GLOBALS.lane.page:{user.username} paged you: {body}
+6310:GLOBALS.lane.profile_comment:left a comment on your profile!
+6315:GLOBALS.lane.view_profile:is viewing your profile!
+6320:GLOBALS.lane.wink:From {user.username}
+6325:GLOBALS.mails.contact:{site.name} internal mail You got this message through the contact us page from your PHPizabi webside. Username: {me.username} Email address: {me.email} Message: {contact.body}
+6330:GLOBALS.mails.invite:{me.username} invited you! {me.username} has invited you to visit {site.name}. {site.name} is a growing community which offers its users many cool features. {invite.body} Join today by clicking the following link {invite.url}
+6335:GLOBALS.mails.notification_newcomment:New Comment! {site.name} Dear {to.username}, {from.username} has left a new comment on your profile. Please log-in to your account to view the comment they have left for you. The Staff {site.name} {site.url}
+6340:GLOBALS.mails.notification_newmail:You Got Mail! {site.name} Dear {touser.username}, You have received a new message from {fromuser.username}. Log-in to your account to view your new messages. The Staff {site.name} {site.url}
+6345:GLOBALS.mails.notification_newnudge:You got Nudged! {site.name} Dear {to.username}, {from.username} has sent you a nudge! Log-in now to view your nudges. The Staff {site.name} {site.url} 
+6350:GLOBALS.mails.notification_newrequest:New Contact Request! {site.name} Dear {to.username}, {from.username} has added you to their contacts. Log-in now to accept or deny this request. The Staff {site.name} {site.url}
+6355:GLOBALS.mails.registration:Welcome to {site.name}, {username}! Hello {username} - We're proud to welcome you as a member of {site.name}! Please save the following information for future refenrence: Username: {username} Password: {password} In order to activate your account, please click the following link: {site.url}/{reg.confirmURL} 
+6360:GLOBALS.mails.tellafriend:{site.name} Referal A member of {site.name} has sent this referral to you. {tell.body} Please visit: {tell.url}
+6365:GLOBALS.banned:Banned by {by}
+6370:GLOBALS.banned:Active until {expire}
+6375:GLOBALS.swap_mode:YOU ARE IN GHOST MODE -
+6380:GLOBALS.swap_mode:LOGOUT
+6385:help.help:Search the Help Center
+6390:help.help:Help Center 
+6395:help.help:See Also
+6400:help.help:Print
+6405:help.help:Contribute
+6410:help.help:Related Articles
+6415:help.help:Close 
+6420:help.help:This article relates to
+6425:help.help:Original help article author: {article.author}
+6430:help.help:2005, 2006 Real!ty Medias - All rights reserved
+6435:help.help:Sorry, we can't find any help article for this page; you may try to manually search instead.
+6440:help.help:No result
+6445:help.help:Help base article id {article.code}
+6450:help.write:Search the Help Center
+6455:help.write:Important!
+6460:help.write:This is an administrator tool, your article will not be saved if you don't have administrative privileges. 
+6465:help.write:Allowed bodycodes:
+6470:help.write:Contribute
+6475:help.write:Origin:
+6480:help.write:Close
+6485:help.write:bold
+6490:help.write:italic
+6495:help.write:underline
+6500:help.write:strikeout
+6505:help.write:teletype
+6510:help.write:color
+6515:help.write:Saved!
+6520:help.write:Generated article {new.id}
+6525:help.write:Post an help article related to {origin}:
+6530:info.contact:Contact us
+6535:info.contact:Do you have comments, questions, or suggestions on how to make {siteName} better? We would love to hear from you! Please be as specific as possible, and we will contact you as soon as possible. Thank you for supporting {siteName}.
+6540:info.contact:Thank you. Please allow 24 to 48 hours for a reply.
+6545:info.contact:Sorry, there has been an error trying to send your mail. Please choose another destination.
+6550:info.contact:Sorry, there has been an error trying to send your mail. The body field has to be filled.
+6555:info.contact:Please fill in the form below
+6560:info.terms:Terms of use / Privacy policy
+6565:info.terms:Below are our Terms of Use and Privacy Policy. Please take a moment of your time to read what we expect of our members and how we are devoted to protecting your privacy.
+6570:info.terms:Privacy Policy
+6575:info.terms:Terms of Use
+6580:info.welcome:Welcome! 
+6585:inkspot.index:Forums
+6590:inkspot.index:Welcome to the forum, please follow the forum rules.
+6595:inkspot.index:Create a Topic 
+6600:inkspot.index:Popular Topics
+6605:inkspot.index:Last Topics
+6610:inkspot.index:Participating Topics
+6615:inkspot.index:Spot Subjects
+6620:inkspot.index:{total.posts} posts in {total.topics} topics ({total.subjects} subjects)
+6625:inkspot.index:Last Posts
+6630:inkspot.search:Search the InkSpot
+6635:inkspot.search:Looking for a particular subject or topic? Use our search to find exactly what you are looking for.
+6650:inkspot.search:Search the Inkspot
+6655:inkspot.subject:Topics
+6660:inkspot.subject:Topics in subject {subject.title}
+6665:inkspot.subject:Create a Topic
+6670:inkspot.subject:Start a new topic!
+6675:inkspot.subject:Search the Spot
+6680:inkspot.subject:Search for topics in the InkSpot 
+6685:inkspot.topic:In the Spot!
+6690:inkspot.topic:This is the thread reading mode page ...
+6695:inkspot.topic:Create a Topic
+6700:inkspot.topic:Back to Subject
+6705:inkspot.topic:{main.replies} replies, {main.views} views for this topic
+6710:inkspot.topic:There is no reply to that thread yet.
+6715:inkspot.topic:... continued from previous post
+6720:inkspot.topic:This post has been chopped into multiple parts, to be continued ... 
+6725:inkspot.write:Write a topic
+6730:inkspot.write:Creating a new topic in subject {subject.title}
+6735:inkspot.write:Your post has been recorded successfully
+6740:inkspot.write:Read this post
+6745:inkspot.write:Go back to Subject
+6750:inkspot.write:Sorry a thread by that name already exist in this subject
+6755:inkspot.write:Sorry, you are not allowed to post in that thread
+6760:inkspot.write:Sorry, this subject is locked. You can not post into it
+6765:inkspot.write:Sorry, this subject does not exist
+6770:inkspot.write:Sorry, there was blank fields in your post 
+6775:inkspot.write:Please Select a Subject
+6780:interact.file:Send a file to {user.username}
+6785:interact.file:Send file 
+6790:interact.file:Your file
+6795:interact.file:Your file:
+6800:interact.file:Your file has successfully been sent!
+6810:interact.file:Please wait a few minutes before sending again.
+6820:interact.page:Page {user.username}
+6825:interact.page:Would you like to send a quick message to another user? If so, type in your short message below, click submit, and your message will be delivered immediately. Keep it short.
+6830:interact.page:Your message
+6835:interact.page:Type your message:
+6840:interact.page:Your page has successfully been sent! 
+6845:interact.page:Please wait for some time before paging again.
+6850:interact.page:User is offline and does not want to receive page through his/her mobile device 
+6855:interact.page:User is offline and does not have a mobile device configured
+6860:invite.tellafriend:Tell a friend
+6865:invite.tellafriend:Like what you see so far and wish to share you great experiences with everyone? Simply add your friends email address in the required field and tell them about all the features, photos, blogs, and members that have inspired you to sign up! Once you have entered everything you wanted to share, simply hit submit!
+6870:invite.tellafriend:Thank you for spreading the word about {siteName}!
+6875:invite.tellafriend:Please fill in the form below
+6880:invite.tellafriend:Send invitation to the following email address
+6885:invite.tellafriend:I would like to ...
+6890:invite.tellafriend:refer the last page I visited to my friend(s)
+6895:invite.tellafriend:invite my friend(s) to register to this website
+6900:invite.tellafriend:Would you like to add a personal message?
+6905:mails.forward:Forward mail
+6910:mails.forward:Forward ..
+6915:mails.forward:Your mail has been delivered successfully
+6920:mails.forward:Go to my inbox
+6925:mails.forward:Go to my desktop
+6930:mails.forward:Can not send mail
+6935:mails.forward:Sorry there has been an error trying to send your mail. The user's mailbox may be full. Please try again later.
+6940:mails.forward:Either one or both the subject and/or body field where empty. Please fill in the form entirely. 
+6945:mails.forward:No username was specified
+6950:mails.forward:The username you specified is not valid 
+6955:mails.forward:Flood Control
+6960:mails.forward:Sorry, your host is sending massive mails. Please wait a couple minutes before resending your mail
+6965:mails.forward:Send to... 
+6970:mails.forward:Send to a contact: 
+6975:mails.forward:Sorry you don't have any contact set yet
+6980:mails.forward:Send to a user:
+6985:mails.forward:Did you mean
+6990:mails.forward:Sorry, guests can not send mails.
+6995:mails.mails:My Mail
+7000:mails.mails:You have {mailsCounter.mails} mail ({mailsCounter.newMails} new). 
+7005:mails.mails:Write a new message
+7010:mails.mails:Sorry this mailbox is empty
+7015:mails.mails:Empty trash
+7020:mails.mails:Create a mailbox
+7025:mails.mails:Mailboxes
+7030:mails.mails:Sorry the mailbox name you submitted is too long
+7035:mails.mails:Sorry you are not allowed to create custom mailboxes
+7040:mails.mails:Sorry you are not allowed to create more mailboxes
+7045:mails.mails:The mailbox has been created successfully 
+7050:mails.mails:Quota
+7055:mails.mails:You are using {quota.kBytesInUse}K out of a total allotment of {quota.allotment}K ({quota.percentageInUse}% space in use)
+7060:mails.read:Mail from {user.username}
+7065:mails.read:Sent by {user.username} on {mail.date}
+7070:mails.read:With this mail...
+7075:mails.read:Reply to this mail
+7080:mails.read:Forward this mail
+7085:mails.read:Move mail to {mailbox.name}
+7090:mails.read:Delete this mail
+7095:mails.read:Block this user
+7100:mails.read:Delete this mail and block this user
+7105:mails.read:Go back to my inbox
+7110:mails.read:Write a mail
+7115:mails.reply:Reply to {user.username}
+7120:mails.reply:Your mail has been delivered successfully
+7125:mails.reply:Can not send mail
+7130:mails.reply:Sorry there has been an error trying to send your mail. The user's mailbox may be full. Please try again later. 
+7135:mails.reply:Either one or both the subject and/or body field where empty. Please fill in the form entirely.
+7140:mails.reply:The username you specified is not valid
+7145:mails.reply:Compose your message below 
+7150:mails.write:Write mail 
+7155:mails.write:Send a message to someone you care about, an old friend, a new friend, or even someone you don't know.  Remember, the most successful opening line is Hi.  This mail system is for internal use only, so regular email addresses will not work, only members on this site.
+7160:mails.write:Can not send mail
+7165:mails.write:Sorry there has been an error trying to send your mail. The user's mailbox may be full. Please try again later.
+7170:mails.write:Either one or both the subject and/or body field where empty. Please fill in the form entirely.
+7175:mails.write:No username was specified
+7180:mails.write:The username you specified is not valid
+7185:mails.write:Sorry, your host is sending massive mails. Please wait a couple minutes before resending your mail 
+7190:mails.write:Compose your mail below
+7195:mails.write:Send to...
+7200:mails.write:Send to a contact:
+7205:mails.write:Please Select a Contact...
+7210:mails.write:Sorry you don't have any contact set yet
+7215:mails.write:Send to a user:
+7220:mails.write:Did you mean
+7225:mails.write:Sorry, guests can not send mails.
+7230:pictures.crop:Upload Pictures
+7235:pictures.crop:Crop your Picture
+7240:pictures.crop:Your photograph needs to be cropped to meet our photograph aspect ratio requirements. Please left click the image, hold and drag, then release to form the selection. You may then click on the box and move it around to adjust the image the way you want it. If you are unsatisifed with your selection you may click start over and try it again. Once you are satisfied, click the submit button.
+7245:pictures.crop:Start Over
+7250:pictures.crop:Your picture has successfully been cropped. Please wait
+7255:pictures.edit:Edit Picture
+7260:pictures.edit:Would you like to add or edit your pictures description or change the pictures title? You may do so by entering or editing the information below.
+7265:pictures.edit:Move to:
+7270:pictures.edit:...one of your libraries:
+7275:pictures.edit:Move from {picture.library} 
+7280:pictures.edit:...to Main Library
+7285:pictures.edit:...to {library.item}
+7290:pictures.edit:pictures.edit:Main Library
+7295:pictures.edit:...a new library:
+7300:pictures.edit:Make this picture private 
+7305:pictures.edit:Update 
+7310:pictures.gallery:Welcome to my gallery!
+7315:pictures.gallery:Oh! This person has not written anything to place in their personal header.
+7320:pictures.gallery:Have you
+7325:pictures.gallery:Ranked {votes.average}/5, {votes.total}  vote(s)
+7330:pictures.gallery:Thank you - Your vote has been cast!
+7335:pictures.gallery:Sorry, {user.username} has uploaded no picture yet. <a href=\"?L=pictures.upload\">Have you? 
+7340:pictures.gallery:More pictures
+7345:pictures.gallery:{user.username} has {counter.totalPictures} pictures ({counter.privatePictures} private) in {counter.groups} groups. 
+7350:pictures.gallery:Sorry, {user.username} does not have more pictures and / or groups
+7355:pictures.gallery:Manage Gallery
+7360:pictures.gallery:Comments on this picture
+7365:pictures.gallery:Sorry there is no comment for this picture yet
+7370:pictures.gallery:Drop your comment for this picture
+7375:pictures.gallery:Your comment has been successfully posted
+7380:pictures.gallery:Sorry you can not post comments for this gallery yet, this user has no picture
+7385:pictures.gallery:Control your gallery
+7390:pictures.pictures:Gallery Management
+7395:pictures.pictures:Would you like to upload a new picture, update, edit or delete an existing one? Or maybe you would like to put a fresh face on your profile for the world to see.
+7400:pictures.pictures:In library: {picture.library} 
+7405:pictures.pictures:Edit this picture
+7410:pictures.pictures:Remove this picture
+7415:pictures.pictures:Make main
+7416:pictures.pictures:You have to upload pictures before you can use this tool
+7420:pictures.upload:Take some time to post a few photos to share with {siteName} members. You may make a photograph public for the world to see or private for a select few. Let people see what your world is like!
+7425:pictures.upload:My Gallery
+7430:pictures.upload:Can not save picture
+7435:pictures.upload:Sorry, the file field appeared to be empty, you have to fill the FILE form field.
+7440:pictures.upload:Sorry, the file type you sent is not supported by this website.
+7445:pictures.upload:Your picture...
+7450:pictures.upload:Add into
+7455:pictures.upload:...an existing group:
+7460:pictures.upload:Please Select a Group...
+7465:pictures.upload:Generic Gallery
+7470:pictures.upload:...a new group:
+7475:pictures.upload:File:
+7480:pictures.upload:Picture title:
+7485:pictures.upload:Picture description:
+7490:pictures.upload:Make this picture private
+7495:pictures.upload:Sorry, guests can not upload pictures.
+7500:questionaire.fill:Thank you for completing the questionaire, your profile has been updated.
+7504:registration.confirm:Your account has been verified and is now active. You will be redirected to your desktop in a few seconds. 
+7505:registration.confirm:There has been an error verifying your account. Please contact us.
+7510:registration.register:Welcome! You're on your way to joining one of the fastest growing websites on the internet. Registration is fast, simple, taking only a minute or two, and then you're on your way to being part of one of the greatest virtual communities online. Here at {siteName} you will be able to upload photos, leave comments on member profiles, write your very own blog, search for friends or make new ones, and much much more.
+7515:registration.register:Let's get started!
+7520:registration.register:Please complete the following
+7525:registration.register:Sorry, you are already a registered member.
+7530:registration.register:Email Address:
+7535:registration.register:We will send you an email to confirm that your email address is valid. Please click the link within the email to activate your registration. If you do not receive our email, please check your junk mail folder. 
+7540:registration.register:I Was Born On:
+7545:registration.register:You must be at least {age} years old to join.
+7550:registration.register:I Am A:
+7555:registration.register:Username:
+7560:registration.register:Username must be between {username_minlen} and {username_maxlen} characters. Spaces or special characters are not allowed. Username is not case sensitive.
+7565:registration.register:Password must be a minimum of {password_minlen} characters, spaces are not allowed. Password is not case sensitive.
+7570:registration.register:Password:
+7575:registration.register:Confirm Password:
+7580:registration.register:Country:
+7585:registration.register:State / Province:
+7590:registration.register:City:
+7595:registration.register:Zip / Postal Code:
+7600:registration.register:Verification Code:
+7605:registration.register:Enter Code:
+7610:registration.register:You must enter the verification code in the box above.
+7615:registration.register:I accept and agree to the user agreement
+7620:registration.register:Continue
+7625:registration.register:Your username was not formatted correctly. Username must be between {username_minlen} and {username_maxlen} characters long. A-Z, a-z, 0-9, dash and underscore are allowed. 
+7626:registration.register:The username you entered is already in use, please choose another.
+7630:registration.register:The password you entered was too short. Please make sure your password is at least {password_minlen} characters long. The password you entered does not match the password confirmation, please try again.
+7635:registration.register:Your email address has an error, please make sure you type it correctly.
+7640:registration.register:Sorry, that email address is already registered on this website
+7645:registration.register:The verification code you entered does not match, please try again.
+7650:registration.register:This was a success... Please check your emails.
+7655:registration.register:Code
+7660:registration.register:Step 1 out of 2
+7661:registration.questionaire:Thank you for registering. Please check your emails for your activation code.
+7665:search.match:C/Match Alpha 
+7670:search.match:Here are the closest matches to your profile. The following matches at put into a  percentage compared to what you have entered into your profile, and what they have entered. Take a look, send a message, and make some new friends!
+7675:search.match:{users.onlineCount} matches, showing a maximum of 50 
+7680:search.match:Match Score: {user.matchScore}%
+7685:search.match:{user.username}, {user.gender}, {user.age} years old 
+7690:search.match:My Saved Searches
+7695:search.match:Make your searching faster and easier by saving your searches for a one click operation.
+7700:search.match:Other Search Options
+7705:search.match:Search Users
+7710:search.match:Online Users
+7715:search.match:Search in Blogs
+7720:search.online:Online users
+7725:search.online:{users.onlineCount} users are actually online
+7730:search.online:list  grid 
+7735:search.online:Other Search Options
+7740:search.online:Search Users 
+7745:search.online:Search in Blogs
+7750:search.online:Match me!
+7755:search.users:Search Users
+7760:search.users:Trying to find someone that shares your interests  or matches what you&rsquo;re searching for?&nbsp;  Use the following options below to help narrow your search, and provide  you with the best possible results.
+7765:search.users:Your search produced {results.countTotal} result(s)
+7770:search.users:Your search produced no result
+7775:search.users:Please fill in your search criteria below
+7780:search.users:Page {page.thisPage} out of {page.total} 
+7785:search.users:{user.username}, {user.gender}, {user.age} years old
+7790:search.users:Save this search
+7795:search.users:Name your search:
+7800:search.users:Other Search Options
+7805:search.users:Online Users
+7810:search.users:Search in Blogs
+7815:search.users:Match me!
+7820:users.desktop:You have contacts! 
+7825:users.desktop:{me.username} you have {notification.count} pending contact request(s). Please click the My Contacts link to go to your contact management page where you can accept or deny the new request(s).
+7830:users.desktop:You have mail!
+7835:users.desktop:{me.username} you have received {mails.counter} new message(s). To view your new message(s) please click the My Inbox link to go to your inbox.
+7840:users.desktop:You don't have a picture!
+7845:users.desktop:Upload Pictures
+7850:users.desktop:By uploading a picture of yourself, you will receive many more profile views than those without a picture. Click the Upload Pictures link to upload a picture now!
+7855:users.desktop:Welcome to your desktop
+7860:users.desktop:{me.username} Your desktop is your centralized location for receiving new mail notices, contact requests, nudges and much more. It is also where you will find links to your overall preferences and settings, making your time with us as pleasant and rewarding as possible.
+7865:users.desktop:My Settings
+7870:users.desktop:Myself 
+7875:users.desktop:My Blog
+7880:users.desktop:Write Blog
+7885:users.desktop:Mails
+7890:users.desktop:You have {notification.count} pending contact requests!
+7895:users.desktop:{contacts.userCount} contact(s) ({contacts.onlineCount} online) in {contacts.groupCount} group(s)
+7900:users.desktop:Manage my contacts
+7905:users.desktop:Sorry you have no groups and/or contacts
+7910:users.desktop:This group contains no contact
+7915:users.desktop:My Favorite Blogs
+7920:users.desktop:User's blog
+7925:users.desktop:You do not have any favorite blog yet
+7930:users.desktop:You may add blogs to your favorites by clicking the add to favorites link on any blog on this website!
+7935:users.desktop:Notifications
+7940:users.desktop:You got nudges!
+7945:users.desktop:Clear All
+7950:users.desktop:Today
+7955:users.desktop:My Horoscope
+7960:users.desktop:New Blogs
+7965:users.desktop:Blog article by <a href=\"?L=users.profile&id={blog.userid}\">{blog.username}</a> posted at {blog.time} (~{blog.words} words)
+7970:users.desktop:New Comments on your Profile
+7975:users.desktop:Comment by {comment.username} posted at {comment.time}
+7980:users.desktop:You have {pictures.total} picture(s), {pictures.private} private
+7985:users.desktop:Next 5 events:
+7990:users.desktop:Create an event
+7995:users.desktop:Site News
+8000:users.desktop:No news article to show
+8005:users.desktop:Recent Profile Views
+8010:users.desktop:Sorry nobody saw your profile so far
+8015:users.desktop:{views.total} people have viewed your profile
+8020:users.desktop:My Ranking
+8025:users.desktop:You have gotten <strong>{votes.total}</strong> votes with an average ranking of <strong>{votes.average}/5
+8030:users.lostpass:Password
+8035:users.lostpass:Change your password!
+8040:users.lostpass:Your password has been updated successfully
+8045:users.lostpass:The new password you created does not match the password confirmation value required
+8050:users.lostpass:Your password was not formatted correctly. Please do not use spaces
+8055:users.lostpass:Your password is to short
+8060:users.lostpass:The username you entered is incorrect. Please try again
+8065:users.lostpass:System error, no token provided.
+8070:users.lostpass:New password:
+8075:users.lostpass:Confirm new password:
+8080:users.myself:Myself
+8085:users.myself:Take a moment to share additional information about yourself by completing the following sections. Let people know who you are, your likes and dislikes, and let everyone experience a little of your world today!
+8090:users.myself:My Settings
+8095:users.myself:Your User Data
+8100:users.myself:Your personal user data ....
+8105:users.myself:Quote:
+8110:users.myself:Header:
+8115:users.myself:Add to your profile
+8120:users.myself:Those are some questionaires you may want to fill to add more data to your profile.
+8125:users.myself:Checked
+8130:users.myself:Password
+8135:users.myself:Change your password!
+8140:users.myself:Your password has been updated successfully
+8145:users.myself:The new password you created does not match the password confirmation value required
+8150:users.myself:Your password was not formatted correctly. Please do not use spaces
+8155:users.myself:Your password is to short
+8160:users.myself:The actual password you entered is incorrect. Please try again
+8165:users.myself:Actual password:
+8170:users.myself:New password:
+8175:users.myself:New password
+8180:users.myself:Confirm new password:
+8185:users.myself:Did you know?
+8190:users.myself:Many settings such as mobile preferences, what to show on your desktop, and your notification behaviors can by found by visiting the My Settings page.
+8195:users.profile:Welcome to my profile!
+8200:users.profile:Oh! This person has not written anything to place in their personal header.
+8205:users.profile:Have you
+8210:users.profile:Me, Myself, I!
+8215:users.profile:{user.username}, {user.gender}, {user.age} Years old
+8220:users.profile:Contacts
+8225:users.profile:Add {user.username} to my contacts list
+8230:users.profile:{user.username} received {comments.getCount} comments and sent
+8235:users.profile:for others |
+8240:users.profile:View all comments
+8245:users.profile:{user.username} received {comments.getCount} comments and sent
+8250:users.profile:Latest Blog Article by {user.username}
+8255:users.profile:Read this article
+8260:users.profile:User's blog
+8265:users.profile:Sorry, {user.username} has no blog article yet.
+8270:users.profile:Drop your comment for this profile
+8275:users.profile:Your comment has been successfully saved. Thank you!
+8280:users.profile:Online since {onlinesince}
+8285:users.profile:Last logged in on {lastlogin}
+8290:users.profile:Never logged in
+8295:users.profile:{pictures.count} pictures, {pictures.privatecount} private |
+8300:users.profile:View Gallery
+8305:users.profile:Keep in touch
+8310:users.profile:You are a guest user, some options are disabled
+8315:users.profile:This is your own profile page, some options are disabled
+8320:users.profile:Add {user.username} to my contacts list
+8325:users.profile:Block {user.username} from contacting me
+8330:users.profile:UnBlock {user.username} from contacting me
+8335:users.profile:Send {user.username} a new message
+8340:users.profile:Page {user.username}
+8345:users.profile:Rate me!
+8350:users.profile:Move your mouse over the slider - click to submit your vote
+8355:users.profile:Thank you - Your vote has been cast!
+8360:users.profile:{user.username} got <strong>{votes.total}</strong> votes with an average ranking of <strong>{votes.average}/5
+8365:users.profile:Send a Nudge
+8370:users.profile:You just sent a nudge
+8375:users.profile:Sorry, guests can not send nudges
+8380:users.profile:Recent Profile Views
+8385:users.profile:Sorry nobody saw this profile so far
+8390:users.profile:{views.total} people have viewed this profile
+8395:users.profile:Geographic Localisation
+8400:users.profile:{user.username} is living in {user.city} {user.state} {distance} <ZONE distanceLabel miles>miles</ZONE distanceLabel miles><ZONE distanceLabel kilometers>kilometers</ZONE distanceLabel kilometers> away from you.
+8405:users.profile:Map this
+8410:users.profile:Me!
+8415:users.settings:My Settings
+8420:users.settings:Here at {siteName}, we wish to make your experience the best that it can be. Please look through the following options and select the preferences that are appropriate for you. 
+8425:users.settings:Notifications
+8430:users.settings:Notify me ...
+8435:users.settings:Send notification to...
+8440:users.settings:when I receive a new message
+8445:users.settings:Mail
+8450:users.settings:Mobile
+8455:users.settings:when an event is about to start
+8460:users.settings:Mobile (sms)
+8465:users.settings:about my contacts birthday
+8470:users.settings:when I receive a  profile comment
+8475:users.settings:when I receive a contact request
+8480:users.settings:when I receive a nudge
+8485:users.settings:Mobile
+8490:users.settings:Did you know that you can access your account and receive notifications and messages with your mobile device? If your cellular phone or PDA has an SMS address or an internet access, you can configure your mobile preferences to route selected information to it.
+8495:users.settings:My SMS address:
+8500:users.settings:Let my contacts send SMS messages to me
+8505:users.settings:Don't send me SMS messages while I am online
+8510:users.settings:Did you know?
+8515:users.settings:Did you know that you can edit  your profile information such as: quote, header, geographic location,  questionnaires, and even your password?&nbsp;  Visit the <a href=\"?L=users.myself\">Myself</a> page to view these options!
+8520:contacts.remove:Remove user {user.username}
+8525:contacts.remove:No user has been specified.
+8530:contacts.remove:You are about to remove a user from your contacts list. Would you like to proceed?
+8535:contacts.remove:User has been removed

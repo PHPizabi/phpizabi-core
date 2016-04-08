@@ -1,0 +1,28 @@
+So that's a molo markup sample...
+
+<molo>
+
+  <info name="ZomJit" version="5.4" author="Claude Desjardins" support="Feedback@realitymedias.com" url="http://www.phpizabi.net" body="some more text... bah!">
+
+  <install>
+    
+	<tpl mode="append" reference="file name" location="marker name" position="left,right" value=".........">
+	<tpl mode="modify" reference="file name" location="existing <zone> tag name" value=".....">
+	<tpl mode="remove" reference="file name" location="existing <zone> tag name">
+	
+	<conf mode="append" reference="CONF_THIS" value="new value">
+	<conf mode="modify" reference="CONF_THIS" value="roger!">
+	<conf mode="remove" reference="CONF_THIS">
+	
+	<map mode="append" reference="id" location="this.that" value="roger">
+	
+	<db mode="query" value="the query">
+	
+	<io mode="make" value="directory or file to create" chmod="0777">
+	<io mode="unlink" value="directory or file to unlink">
+	 
+  </install>
+  
+  <update> Same shiznit </update>
+
+</molo>

@@ -1,0 +1,461 @@
+/* 
+  Those are the main and generic styles for this theme
+*/
+body {
+  background: #2C4384 url("images/frame/background.gif") repeat-y 50% 0 fixed;
+  color: #050d24;
+  font: 12px "Lucida Grande", verdana, helvetica, arial, sans-serif;
+  margin: 0px;
+}
+
+
+td, p {
+  font: 12px "Lucida Grande", verdana, helvetica, arial, sans-serif;
+  margin: 0px;
+}
+
+a {
+  color: #2f63b3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+}
+
+input, select, textarea {
+  font-size: 100%;
+  line-height: 150%;
+  font: 11px "Lucida Grande", verdana, helvetica, arial, sans-serif;
+}
+
+.submit {
+  background: #DCE6FF;
+  font: 11px "Lucida Grande", verdana, helvetica, arial, sans-serif;
+  font-weight: bold;
+  color: #2f63b3;
+  margin: 1px;
+  padding: 3px 15px 3px 15px;
+  border: solid 1px #2f63b3;
+}
+
+.submit_disabled {
+  background: #CCCCCC;
+  font: 11px "Lucida Grande", verdana, helvetica, arial, sans-serif;
+  font-weight: bold;
+  color: #999999;
+  margin: 1px;
+  padding: 3px 15px 3px 15px;
+  border: solid 1px #999999;
+}
+
+/* Text hilight */
+.hilight {
+  background-color:#FFFF00; /* #DCE6FF; 
+  border-top: 1px solid #2f63b3;
+  border-bottom: 1px solid #2f63b3; */
+}
+
+/*
+  Gauges Styles
+*/
+#gaugewrapper {
+  border: solid 1px #000; 
+  width: 100%;
+}
+
+#gaugelevel {
+  position: relative; 
+  left: 0; 
+  top: 0; 
+  background-color: #CCFF00;
+}
+
+#gaugelabel {
+  width: 100%; 
+  position: relative; 
+  top: 0; 
+  left: 0; 
+  text-align: center;
+}
+
+/*
+  This small hack will force the main table
+  to expand vertically and stretch it so it
+  fills the browser viewport.
+*/
+html,body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  border: none;
+}
+
+.fullheight {
+  height: 100%;
+}
+
+/*
+  The following "homeColorSet" and "footerColorSet"
+  styles are color switches for elements that are outside
+  the main white-backgrounded area, the home one is
+  located on the homepage (which has a dark blue background)
+  and the footer covers the bottom of each page which
+  is also using a dark blue background color
+*/
+.homeColorSet1 {
+  color: #FFFFFF;
+}
+
+.homeColorSet2 {
+  color: #6699CC;
+}
+
+.footerColorSet1 {
+  color: #FFFFFF;
+}
+
+.footerColorSet2 {
+  color: #2f63b3;
+}
+
+/* Inkspot styles */
+#inkspotMainPostBody {
+  position: relative;
+  background-color: #F2F5FF;
+  padding: 20px;
+  width: 660px;
+  border: 1px solid #BBD4F9;
+}
+
+/* Calendars Styles */
+#calendar_emptyday {
+  border: #FFFFFF solid 1px;
+  float: left;
+  width: 28px;
+  height: 26px;
+  margin: 1px;
+}
+
+#calendar_day {
+  border: #CCCCCC solid 1px;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+  width: 28px;
+  height: 26px;
+  margin: 1px;
+}
+
+#calendar_busyDay {
+  border: #CCCCCC solid 1px;
+  background-color: #DCE6FF;
+  text-align: center;
+  vertical-align: middle;
+  float: left;
+  width: 28px;
+  height: 26px;
+  margin: 1px;
+  color: #2f63b3;
+}
+
+#calendar_busyDay a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #2f63b3;
+  text-decoration: none;
+}
+
+#calendar_row {
+  clear: both;
+}
+
+#calendar {
+}
+
+/* Vote styles */
+#votewrap {
+  height: 10px;
+  width: 50px;
+  background: url(/theme/default/images/frame/rank_objects/green_layer.gif) repeat-x;
+  overflow:visible;
+}
+
+#voteInt {
+  height: 10px;
+  width: 50px;
+  text-align: center;
+  font: 8px "Lucida Grande", verdana, helvetica, arial, sans-serif;
+}
+
+.votehover {
+  width: 20%;
+  height: 10px;
+  float: left;
+  background: url(/theme/default/images/frame/rank_objects/blue_layer.gif) repeat-x;
+  font-size: 1px;
+  margin: 0px;
+}
+
+.voteclear {
+  width: 20%;
+  height: 10px;
+  float: left;
+  font-size: 1px;
+  margin: 0px;
+  display: block;
+}
+
+/* Quotes styles */
+blockquote {
+  margin: 15px 30px 0 10px;
+  padding-left: 20px;
+  border-left: 5px solid #6699FF;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lucida Grande", "Trebuchet MS", verdana, helvetica, arial, sans-serif;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+  color: #658EFD;
+  font-size: 25px;
+}
+
+h4 {
+  color: #658EFD;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h5 {
+  color: #666666;
+  font-size: 10px;
+}
+
+h6 {
+  color: #2f63b3;
+  font: 13px "Lucida Grande", verdana, helvetica, arial, sans-serif;
+}
+
+/* Some special form fields classes */
+#formTitle_DISABLED {
+  font-family: "Lucida Grande", "Trebuchet MS", verdana, helvetica, arial, sans-serif;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+  color: #658EFD;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #DCE6FF;
+  width: 100%;
+  border: solid 1px #DCE6FF;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+/* Navigation menu */
+#navigation {
+  padding-left: 30px;
+}
+
+#navigation a {
+  font: 13px bold "Trebuchet MS", verdana, helvetica, arial, sans-serif;
+  color: #515151;
+  padding-left: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#usercontrol {
+  padding-right: 30px;
+}
+
+#usercontrol a {
+  font: 13px bold "Trebuchet MS", verdana, helvetica, arial, sans-serif;
+  color: #515151;
+  padding-right: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Copyright */
+#copyright {
+  font: 10px Arial, Helvetica, sans-serif;
+  color: #FFFFFF;
+}
+
+/* Users pictures */
+#picture {
+  padding: 2px;
+  border: 1px solid #CECECE;
+  background-color: #FFFFFF;
+}
+
+/* BodyCodePicture */
+#bodyCodeImage {
+  padding: 2px;
+  border: 1px solid #CECECE;
+  background-color: #FFFFFF;
+}
+
+/* CHAT StyleSheet */
+.chatNickEntity {
+  clear: both; 
+  border-bottom: solid 1px #BBD4F9; 
+  padding: 2px; 
+  background-color: #DCE6FF;
+}
+
+.chatNickEntity:hover {
+  clear: both; 
+  border-bottom: solid 1px #BBD4F9; 
+  padding: 2px; 
+  background-color: #BBD4F9;
+}
+
+.selectedChatNickEntity {
+  clear: both; 
+  border-bottom: solid 1px #BBD4F9; 
+  padding: 2px; 
+  background-color:#FFCC66;
+}
+
+#chatContent {
+	width: 100%;
+	height: 400px;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 5px;
+}
+
+#nickList {
+  width: 100%;
+  height: 400px;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 5px;
+}
+
+#shadeWrapper {
+  background-color: #000;
+  filter: alpha(opacity=40);
+  -moz-opacity: .40;
+  opacity: .40;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+}
+
+#noShadeContent {
+  top: 30%;
+  left: 30%;
+  filter: alpha(opacity=99);
+  -moz-opacity: .99;
+  opacity: .99;
+  position: absolute;
+  z-index: 11;
+  visibility: hidden;
+  padding: 2px;
+  border: 1px solid #CECECE;
+  background-color: #fff; 
+}
+
+/* TABS STYLESHEET */
+.tabberlive .tabbertabhide {
+	display:none;
+}
+
+.tabber {}
+
+.tabberlive {
+	margin-top:1em;
+}
+
+ul.tabbernav {
+	margin:0;
+	padding: 3px 0;
+	border-bottom: 1px solid #2f63b3;
+	font: bold 11px Verdana, sans-serif;
+}
+
+ul.tabbernav li {
+	list-style: none;
+	margin: 0;
+	display: inline;
+}
+
+ul.tabbernav li a {
+	padding: 3px 0.5em;
+	margin-left: 3px;
+	border: 1px solid #2f63b3;
+	border-bottom: none;
+	background: #AEC9F4;
+	text-decoration: none;
+}
+
+ul.tabbernav li a:link { 
+	color: #2f63b3; 
+}
+ul.tabbernav li a:visited {
+	color: #2f63b3;
+}
+
+ul.tabbernav li a:hover
+{
+	color: #FFFFFF;
+	background: #2f63b3;
+	border-color: #2f63b3;
+}
+
+ul.tabbernav li.tabberactive a {
+	background-color: #DCE6FF;
+	border-bottom: 1px solid #DCE6FF;
+}
+
+ul.tabbernav li.tabberactive a:hover {
+	color: #0D5D9C;
+	background: #DCE6FF;
+	border-bottom: 1px solid #DCE6FF;
+}
+
+.tabberlive .tabbertab {
+	padding:5px;
+	border-top:0;
+}
+
+.tabberlive .tabbertab h2 {
+	display:none;
+}
+
+.tabberlive .tabbertab h3 {
+	display:none;
+}

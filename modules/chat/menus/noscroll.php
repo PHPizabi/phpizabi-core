@@ -1,0 +1,1 @@
+<span style="font-size:11px; line-height:22px; padding-left:10px;">Auto-Scrolling Disabled - <a href="#" onclick="scrollingActivate();" >Click here to reactivate</a></span>
