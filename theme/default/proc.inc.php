@@ -19,10 +19,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////
 	function bufferProcParse($buffer) {
 		global $CONF;
-		
+
 		$tpl = new template;
 		$tpl -> LoadThis($buffer);
-		
+
 		// HANDLE POSTED NOTEPAD DATA ///////////////////////////////////////////////////////
 		if (isset($_GET["notepad_body"])) {
 			myQ("UPDATE `[x]users` SET `notepad_body` = '".urldecode($_GET["notepad_body"])."' WHERE `id`='".me("id")."'");
@@ -40,19 +40,19 @@
 		if (isset($mySettings["RANDOM_DISPLAY"]["GENDER"]) and $mySettings["RANDOM_DISPLAY"]["GENDER"] != "") {
 			$genderQ = "AND `gender`='{$mySettings["RANDOM_DISPLAY"]["GENDER"]}' ";
 		} else $genderQ = NULL;
-		
-		$footerSelect = myQ("
-			SELECT `id`,`mainpicture`,`username` 
-			FROM `[x]users` 
+
+		$footerSelect = myF("
+			SELECT `id`,`mainpicture`,`username`
+			FROM `[x]users`
 			WHERE `mainpicture` != ''
 			AND `active` = '1'
 			{$genderQ}
-			ORDER BY RAND() 
+			ORDER BY RAND()
 			LIMIT 4
 		");
-		
+
 		$i=0;
-		while ($footerRow = myF($footerSelect)) {
+		while ($footerRow = $footerSelect) {
 			$footerRandomUsers[$i]["user.username"] = $footerRow["username"];
 			$footerRandomUsers[$i]["user.id"] = $footerRow["id"];
 			$footerRandomUsers[$i]["user.mainpicture"] = $footerRow["mainpicture"];
@@ -66,7 +66,7 @@
 			}
 			else $tpl -> Zone("footer_element", "empty");
 		}
-		
+
 		elseif ($_GET["proc_footer_element"] == "random") {
 			if (isset($footerRandomUsers)) {
 				$tpl -> LoadThis($tpl -> Zone("footer_element", "random_users", true));
@@ -74,7 +74,7 @@
 			}
 			else $tpl -> LoadThis($tpl -> Zone("footer_element", "empty", true));
 		}
-		
+
 		elseif ($_GET["proc_footer_element"] == "notepad") {
 			$tpl -> LoadThis($tpl -> Zone("footer_element", "notepad", true));
 			if (me("id")) {
@@ -90,10 +90,10 @@
 			some others for the guests. The "login/logout" swap
 			into the theme is one of those! This will convert the
 			zoning.
-		*/			
+		*/
 		if (isset($_SESSION["id"])) $tpl->Zone("userStatus", "user");
 		else $tpl->Zone("userStatus", "guest");
-					
+
 		/*
 			... and a swapping admin link!
 		*/
@@ -106,7 +106,7 @@
 		*/
 		$GLOBALS["SYSTEM_ORIGIN"] = base64_encode("http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
 		$tpl -> AssignArray(array("system.origin" => $GLOBALS["SYSTEM_ORIGIN"]));
-		
+
 		/*
 			Set the "L" call path replacement
 		*/
@@ -127,5 +127,5 @@
 		return $tpl -> Flush(1);
 
 	}
-	
+
 ?>

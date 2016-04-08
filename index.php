@@ -137,11 +137,11 @@
 			proceed to check login information. We will first extract
 			the user row from the db.
 		*/
-		$user = myF(myQ("
+		$user = myF("
 			SELECT `username`,`password`,`id`,`disable_until`,`active`
 			FROM `[x]users`
 			WHERE LCASE(`username`)='".strtolower($_POST["username"])."'
-		"));
+		");
 
 		if (!$user["id"]) $GLOBALS["LOGIN_FAIL_TYPE"] = "e.user";
 		elseif ($user["active"] != 1 && $CONF["LOGIN_REQUIRE_ACTIVE"]) $GLOBALS["LOGIN_FAIL_TYPE"] = "e.active";
@@ -468,7 +468,7 @@
 		if (!$GLOBALS["CHROMELESS_MODE"]) {
 
 			if (ckbool($CONF["POST_PROCESS_CLEAN_OUTPUT"])) {
-				$characters_entities = array('/\\r/', '/\\n/', '/\\t/', ' {2,}+/');
+				$characters_entities = array('/\\r/', '/\\n/', '/\\t/', '/ {2,}+/');
 				$replacement_values = array('', '', '', ' ');
 				$buffer_flush_value = preg_replace($characters_entities, $replacement_values, $buffer_flush_value);
 			}
@@ -675,21 +675,21 @@
 				if (isset($GLOBALS["SELF_USER_DATA"][$content])) return $GLOBALS["SELF_USER_DATA"][$content];
 
 				else {
-					$me = myF(myQ("SELECT `{$content}` FROM `[x]users` WHERE `id`='{$_SESSION["id"]}' LIMIT 1"));
+					$me = myF("SELECT `{$content}` FROM `[x]users` WHERE `id`='{$_SESSION["id"]}' LIMIT 1");
 					return ($GLOBALS["SELF_USER_DATA"][$content] = $me[$content] ? $me[$content] : NULL);
 				}
 
 			}
 
 			else if (isset($_SESSION["id"])) {
-				$GLOBALS["SELF_USER_DATA"] = myF(myQ("
+				$GLOBALS["SELF_USER_DATA"] = myF("
 					SELECT `id`, `last_load`, `last_login`, `username`, `password`, `email`, `email_verified`, `city`,
 						`state`, `country`, `zipcode`, `latitude`, `longitude`, `birthdate`, `age`, `gender`, `language`,
 						`use_theme`, `mainpicture`, `account_type`, `is_administrator`
 					FROM [x]users
 					WHERE `id`='{$_SESSION["id"]}'
 					LIMIT 1
-				"));
+				");
 				return me($content);
 			}
 		}
@@ -714,12 +714,12 @@
 		if (is_null($id))
 			$id = me("id");
 
-		$row = myF(myQ("
+		$row = myF("
 			SELECT `is_administrator`, `is_superadministrator`
 			FROM `[x]users`
 			WHERE `id` = '{$id}'
 			LIMIT 1
-		"));
+		");
 
 		if ($row["is_administrator"] or $row["is_superadministrator"])
 			return true;
@@ -731,12 +731,12 @@
 		if (is_null($id))
 			$id = me("id");
 
-		$row = myF(myQ("
+		$row = myF("
 			SELECT `is_moderator`, `is_administrator`, `is_superadministrator`
 			FROM `[x]users`
 			WHERE `id` = '{$id}'
 			LIMIT 1
-		"));
+		");
 
 		if ($row["is_moderator"] or $row["is_administrator"] or $row["is_superadministrator"])
 			return true;
