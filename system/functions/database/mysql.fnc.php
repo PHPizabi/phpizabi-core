@@ -47,8 +47,9 @@ function myF($content) {
 
 # This function needs re-written to provide the proper output
 function myNum($content) {
+	global $CONF;
 	if (!isset($GLOBALS["MYSQL_CONNECTION"]) or !$GLOBALS["MYSQL_CONNECTION"]) myConnect();
-	return mysql_num_rows($content);
+	return $GLOBALS["MYSQL_CONNECTION"]->query(str_replace("[x]", $CONF["MYSQL_DATABASE_TABLES_PREFIX"], $content))->rowCount();
 }
 
 function myClose() {

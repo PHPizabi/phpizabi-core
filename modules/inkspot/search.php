@@ -20,15 +20,15 @@
 
 	/* Check Structure Availability */
 	if (!defined("CORE_STRAP")) die("Out of structure call");
-	
+
 	// TEMPLATE ENGINE INITIALIZATION /////////////////////////////////////////////////
 	$tpl = new template;
 	$tpl -> Load("search");
 	$tpl -> GetObjects();
-	
+
 	// QUERY STRING PREPARATION ///////////////////////////////////////////////////////
 	if (isset($_GET["query"])) {
-		
+
 		// BOOLEAN ////////////////////////////////////////////////////////////////////
 		/*
 			we will manipulate the search booleans here, there
@@ -37,7 +37,7 @@
 			query for that one. Set the variable...
 		*/
 		if (!isset($_GET["boolean"]) || $_GET["boolean"] == "or") {
-			
+
 			/*
 				If there was only one word, we will prefix it with
 				a strict search char and append a wildcard char at
@@ -47,52 +47,52 @@
 			if (strlen(trim($_GET["query"])) > 0 && !strstr(trim($_GET["query"]), " ") && !strstr($_GET["query"], "*")) {
 				$query = "+".$_GET["query"]."*";
 			}
-			
+
 			/*
 				If there was more than a word and the boolean is
 				null or is "OR", we will use the query as-is.
 			*/
 			else $query = $_GET["query"];
-		
+
 		}
-		
+
 		/*
 			Boolean is "AND", each word of the query string must
 			be prefixed with a PLUS (+) sign. Let's deal with that...
 		*/
 		elseif ($_GET["boolean"] == "and") $query = str_replace(" ", " +", $_GET["query"]);
-		
+
 		/*
 			Boolean is "PHRASE", we will need to "enquote" the
 			query string so its considered in whole.
 		*/
 		elseif ($_GET["boolean"] == "phrase") $query = "+\"{$_GET["query"]}\"";
-		
+
 		// FIELDS /////////////////////////////////////////////////////////////////////
 		/*
-			The "sin" get array defines in what fields we will be 
-			searching. if it is not set, we will search in both 
+			The "sin" get array defines in what fields we will be
+			searching. if it is not set, we will search in both
 			the title and the body of the inkspot article, if it is
 			set, we will use its values.
 		*/
 		if (!isset($_GET["sin"]) || !is_array($_GET["sin"])) $sin = "`topic`,`body`";
 		else $sin = "`".implode("`,`", $_GET["sin"])."`";
-		
+
 		// PAGINATION PREPARATION /////////////////////////////////////////////////////
 		if (!isset($_GET["page"]) || !is_numeric($_GET["page"]) || $_GET["page"] == 0) $page = 1;
 		else $page = $_GET["page"];
-		
+
 		// RUN THE QUERY //////////////////////////////////////////////////////////////
 		/*
 			Run the query
 		*/
-		$select = myQ("
-			SELECT SQL_CALC_FOUND_ROWS * 
-			FROM `[x]inkspot` 
-			WHERE MATCH ({$sin}) AGAINST ('{$query}' IN BOOLEAN MODE) 
+		$row = myF("
+			SELECT SQL_CALC_FOUND_ROWS *
+			FROM `[x]inkspot`
+			WHERE MATCH ({$sin}) AGAINST ('{$query}' IN BOOLEAN MODE)
 			LIMIT ".(($page * $CONF["SEARCH_RESULTS_PER_PAGE"]) - $CONF["SEARCH_RESULTS_PER_PAGE"]).",{$CONF["SEARCH_RESULTS_PER_PAGE"]}
 		");
-		
+
 		/*
 			Find out how many rows we would have got
 			without the limit statement
@@ -103,36 +103,36 @@
 
 		// PAGINATION ////////////////////////////////////////////////////////////////
 		$totalPages = ceil($totalRows / $CONF["SEARCH_RESULTS_PER_PAGE"]);
-		
+
 		if ($totalPages > 1) {
-			
+
 			$tpl -> Zone("paginationBlock", "enabled");
-			
+
 			/*
 				If the total number of pages to be shown exceed
 				the total number of pages we are allowed to show,
 				we will show the total allowed pages instead.
 			*/
 			$showPages = ($totalPages>$CONF["SEARCH_PAGINATION_PADDING"]?$CONF["SEARCH_PAGINATION_PADDING"]:$totalPages);
-			
+
 			/*
 				Find out the first page to start up with; if
 				the total number of pages to show divided by
-				two (total middle) is greater than the actual 
+				two (total middle) is greater than the actual
 				page number, we will start with the actual page
-				minus the result of the total pages to show 
+				minus the result of the total pages to show
 				divided by two; else, we start with page one.
 			*/
 			if ($totalPages > $showPages && $page > ceil($showPages/2)) {
-				
+
 				/*
 					Set the first page
 				*/
 				$startUpPage = $page - floor($showPages/2);
-	
+
 				/*
 					Make sure we show the maximum number of pages
-					when we're at the end of the results. If 
+					when we're at the end of the results. If
 					the value of startuppage (first page
 					to be shown) minus the total number of
 					shown pages is greater than the total number
@@ -143,20 +143,20 @@
 				*/
 				if (($startUpPage+$showPages) > $totalPages) $startUpPage = $totalPages - $showPages;
 			}
-			
+
 			else $startUpPage = 1;
-	
+
 			/*
 				Find out the last page number we will show
-			*/		
+			*/
 			$lastPage = ($startUpPage+$showPages<$totalPages?$startUpPage+$showPages:$totalPages);
-	
+
 			/*
 				Build up the actual page link, we will force the
 				L value and remove the page value.
 			*/
 			$getDataString = "?L=".$_GET["L"];
-	
+
 			foreach ($_GET as $var => $val) {
 				if (!is_array($val)) {
 					if ($var != "page" && $var != "L") $getDataString .= "&{$var}={$val}";
@@ -164,7 +164,7 @@
 					$getDataString .= "&{$var}[]={$arVal}";
 				}
 			}
-	
+
 			/*
 				If the page is greater than page 2
 				(not page one, not page two which are
@@ -175,57 +175,57 @@
 				$tpl -> Zone("pagination.back", "linked");
 				$tpl -> AssignArray(array("pagination.back.link" => $getDataString."&page=".($page-1)));
 			} else $tpl -> Zone("pagination.back", "disabled");
-	
+
 			/*
-				If the first page isnt page number one, 
+				If the first page isnt page number one,
 				we will show a link to it
 			*/
 			if ($startUpPage > 1) {
 				$tpl -> Zone("pagination.first", "linked");
 				$tpl -> AssignArray(array("pagination.first.link" => $getDataString."&page=1"));
 			} else $tpl -> Zone("pagination.first", "disabled");
-	
-	
+
+
 			/*
 				Generate the pages
 			*/
 			$paginationMergeContent = NULL;
 			for ($i=$startUpPage; $i<=$lastPage; $i++) {
-				
+
 				if ($i == $page) {
 					$replaceArray = array(
 						"{pagination.page.pageNumber}" => $i
 					);
-					
+
 					$paginationMergeContent .= strtr($GLOBALS["OBJ"]["pagination.unlinked.page"], $replaceArray);
 				} else {
 					$replaceArray = array(
 						"{pagination.page.pageNumber}" => $i,
 						"{pagination.page.link}" => $getDataString."&page={$i}"
 					);
-					
+
 					$paginationMergeContent .= strtr($GLOBALS["OBJ"]["pagination.linked.page"], $replaceArray);
 				}
 			}
-			
+
 			if (!is_null($paginationMergeContent)) $tpl -> AssignArray(array("pagination.pages" => $paginationMergeContent));
-			
-			
+
+
 			/*
 				If the last possible page isnt shown, we will
 				show a link to it here
 			*/
 			if ($lastPage < $totalPages) {
-				
+
 				$tpl -> Zone("pagination.last", "linked");
 				$tpl -> AssignArray(array(
 					"pagination.last.link" => $getDataString."&page={$totalPages}",
 					"pagination.last.pageNumber" => $totalPages
 				));
 			} else $tpl -> Zone("pagination.last", "disabled");
-			
+
 			/*
-				
+
 			*/
 			if ($page < $totalPages) {
 				$tpl -> Zone("pagination.next", "linked");
@@ -233,23 +233,23 @@
 					"pagination.next.link" => $getDataString."&page=".($page+1),
 				));
 			} else $tpl -> Zone("pagination.next", "disabled");
-	
+
 		}
-		
+
 		else $tpl -> Zone("paginationBlock", "disabled");
-		
+
 		$tpl -> AssignArray(array(
 			"page.thisPage" => $page,
 			"page.total" => $totalPages,
 		));
-		
+
 		// DISPLAY RESULTS ///////////////////////////////////////////////////////////
 		$i=0;
 		/*
 			Cycle in the results array
 		*/
-		while ($row = myF($select)) {
-			
+		while ($row) {
+
 			/*
 				Generate the loop array
 			*/
@@ -266,7 +266,7 @@
 
 			$i++;
 		}
-		
+
 		/*
 			if there was results, let's loop them
 		*/
@@ -280,7 +280,7 @@
 				"count.total" => $totalRows,
 			));
 		}
-		
+
 		/*
 			No results? Show a message
 		*/
@@ -290,21 +290,21 @@
 		}
 
 	}
-	
+
 	else $tpl -> Zone("searchCounter", "disabled");
-	
+
 	// POPULATE FORM FIELDS /////////////////////////////////////////////////
 	/*
-			We will post-populate the fields values here. 
+			We will post-populate the fields values here.
 			The following are the booleans radio buttons
 		*/
-		
+
 		$tpl->AssignArray(array(
 			"boolean.or.checkvalue" => ((isset($_GET["boolean"])&&$_GET["boolean"]=="or")||(!isset($_GET["boolean"]))?"checked":NULL),
 			"boolean.and.checkvalue" => (isset($_GET["boolean"])&&$_GET["boolean"]=="and"?"checked":NULL),
 			"boolean.phrase.checkvalue" => (isset($_GET["boolean"])&&$_GET["boolean"]=="phrase"?"checked":NULL)
 		));
-		
+
 		/*
 			The sin
 		*/
@@ -312,12 +312,12 @@
 			"sin.topic"=>((isset($_GET["sin"])&&in_array("topic",$_GET["sin"]))||(!isset($_GET["sin"]))?"checked":NULL),
 			"sin.body"=>((isset($_GET["sin"])&&in_array("body",$_GET["sin"]))||(!isset($_GET["sin"]))?"checked":NULL)
 		));
-		
+
 		/*
 			The text field
 		*/
 		$tpl->AssignArray(array("get.query"=>(isset($_GET["query"])?$_GET["query"]:NULL)));
-	
+
 	$tpl -> CleanZones();
 	$tpl -> Flush();
 

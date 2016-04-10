@@ -5,8 +5,8 @@
 //                                                                                   //
 // Please read the LICENSE.md & README.md file before using/modifying this software  //
 //                                                                                   //
-// Developing Author:       Andrew James, RubberDucky - andy@phpizabi.org            //
-// Last modification date:  December 13th, 201                                       //
+// Developing Author:       Andy James, AndyWTBlueHair - andy@andy.blue              //
+// Last modification date:  April 8th, 2016                                          //
 // Version:                 PHPizabi 2.01 Alpha                                      //
 //                                                                                   //
 // (C) 2005, 2006 Real!ty Medias                                                     //
@@ -280,7 +280,7 @@
 
 			$this->Buffer = preg_replace(
 				'/\\[([^\\]\\[]+) ?\\{(\\d+)\\}]/Usi',
-				($translator_flat_mode ? "'\\1';" : "\\\$GLOBALS['dictionary']['\\2']"),
+				($translator_flat_mode ? "\\1" : "\\\$GLOBALS['dictionary']['\\2']"),
 				$this->Buffer
 			);
 		}

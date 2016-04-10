@@ -219,8 +219,8 @@
 		}
 
 		else {
-			(isset($_SESSION["id"])?session_unregister('id'):false);
-			(isset($_SESSION["SELF_USER_DATA"])?session_unregister('SELF_USER_DATA'):false);
+			(isset($_SESSION["id"])?session_unset():false);
+			(isset($_SESSION["SELF_USER_DATA"])?session_unset():false);
 
 			header("Location: {$CONF["LOGOUT_ROUTE_TO"]}");
 		}
@@ -685,7 +685,7 @@
 				$GLOBALS["SELF_USER_DATA"] = myF("
 					SELECT `id`, `last_load`, `last_login`, `username`, `password`, `email`, `email_verified`, `city`,
 						`state`, `country`, `zipcode`, `latitude`, `longitude`, `birthdate`, `age`, `gender`, `language`,
-						`use_theme`, `mainpicture`, `account_type`, `is_administrator`
+						`use_theme`, `mainpicture`, `is_administrator`
 					FROM [x]users
 					WHERE `id`='{$_SESSION["id"]}'
 					LIMIT 1
