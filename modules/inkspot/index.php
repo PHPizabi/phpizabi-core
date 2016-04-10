@@ -20,7 +20,7 @@
 
 	/* Check Structure Availability */
 	if (!defined("CORE_STRAP")) die("Out of structure call");
-	
+
 	// TEMPLATE HANDLING ////////////////////////////////////////////////////////////////// FINAL //
 	/*
 		Initialize the template engine and
@@ -30,7 +30,7 @@
 	$tpl = new template;
 	$tpl -> Load("index");
 	$tpl -> GetObjects();
-	
+
 
 	// TEMP //
 	$s[0]["TITLE"] = "This is a subject";
@@ -39,14 +39,14 @@
 	$s[0]["TOPIC_COUNT"] = 1;
 	$s[0]["POST_COUNT"] = 5;
 	$s[0]["TYPES"] = "g,u";
-	
+
 	$s[1]["TITLE"] = "Yozemite ...";
 	$s[1]["ID"] = "2147483646";
 	$s[1]["LOCKED"] = false;
 	$s[1]["TOPIC_COUNT"] = 10;
 	$s[1]["POST_COUNT"] = 41;
 	$s[1]["TYPES"] = "g,u";
-	
+
 	$s[2]["TITLE"] = "shouldnt allow guests";
 	$s[2]["ID"] = "2147483611";
 	$s[2]["LOCKED"] = false;
@@ -65,64 +65,64 @@
 //	$handle = fopen("system/cache/inkspot.dat", "w");
 //	fwrite($handle, pk($s));
 //	fclose($handle);
-	
+
 	// End
-	
+
 	// LOAD SUBJECTS /////////////////////////////////////////////////////////////////////
 	/*
 		Load the inkspot subjects array
 	*/
 	$inkSpotSubjects = unpk(file_get_contents("system/cache/inkspot.dat"));
 	if (!is_array($inkSpotSubjects)) $inkSpotSubjects = array();
-	
-	/* 
+
+	/*
 		Set a couple cyclic counter variables
 	*/
 	$totalSubjects = 0;
 	$totalTopics = 0;
 	$totalPosts = 0;
-	
-	/* 
+
+	/*
 		Generate the inkspot subjects list
 		array to be injected into the spot subjects
 		block
 	*/
 	$i=0;
 	foreach ($inkSpotSubjects as $key => $spotArray) {
-		
+
 		$subjectsReplacementArray[] = array(
 			"subject.title" => $spotArray["TITLE"],
 			"subject.topicCount" => $spotArray["TOPIC_COUNT"],
 			"subject.postCount" => $spotArray["POST_COUNT"],
 			"subject.id" => $spotArray["ID"]
 		);
-		
+
 		$totalSubjects++;
 		$totalTopics += $spotArray["TOPIC_COUNT"];
-		$totalPosts += $spotArray["POST_COUNT"];		
-		
+		$totalPosts += $spotArray["POST_COUNT"];
+
 		$i ++;
 	}
-	
+
 	if (isset($subjectsReplacementArray)) $tpl -> Loop("inkSpotSubjects", $subjectsReplacementArray);
 
-	
+
 	$tpl -> AssignArray(array(
 		"total.subjects" => $totalSubjects,
 		"total.topics" => $totalTopics,
 		"total.posts" => $totalPosts
 	));
-	
+
 	// LOAD POPULAR TOPICS ///////////////////////////////////////////////////////////////
-	$select = myQ("
+	$query = "
 		SELECT *, COUNT(topic) AS count FROM `[x]inkspot`
 		GROUP BY `topic`
 		ORDER BY `count` DESC
 		LIMIT 10
-	");
-	
-	while ($row = myF($select)) {
-		
+	";
+
+	while ($row = myF($query)) {
+
 		$popularReplacementArray[] = array(
 			"pop.date" => date($CONF["LOCALE_HEADER_DATE"], $row["date"]),
 			"pop.username" => _fnc("user", $row["user"], "username"),
@@ -133,21 +133,21 @@
 			"pop.mainpicture" => _fnc("user", $row["user"], "mainpicture")
 		);
 	}
-	
-	if (isset($popularReplacementArray)) {	
+
+	if (isset($popularReplacementArray)) {
 		$tpl -> Loop("popularTopicsList", $popularReplacementArray);
 	}
-	
+
 	// LOAD LAST TOPICS /////////////////////////////////////////////////////////////////
-	$select = myQ("
+	$query = "
 		SELECT *, COUNT(topic) AS count FROM `[x]inkspot`
 		GROUP BY `topic`
 		ORDER BY `date` DESC
 		LIMIT 10
-	");
-	
-	while ($row = myF($select)) {
-		
+	";
+
+	while ($row = myF($query)) {
+
 		$lastReplacementArray[] = array(
 			"last.date" => date($CONF["LOCALE_HEADER_DATE"], $row["date"]),
 			"last.username" => _fnc("user", $row["user"], "username"),
@@ -158,22 +158,22 @@
 			"last.mainpicture" => _fnc("user", $row["user"], "mainpicture")
 		);
 	}
-	
-	if (isset($lastReplacementArray)) {	
+
+	if (isset($lastReplacementArray)) {
 		$tpl -> Loop("lastTopicsList", $lastReplacementArray);
 	}
-	
+
 	// LOAD LAST TOPICS /////////////////////////////////////////////////////////////////
-	$select = myQ("
+	$query = "
 		SELECT *, COUNT(topic) AS count FROM `[x]inkspot`
 		WHERE `user`='".me("id")."'
 		GROUP BY `topic`
 		ORDER BY `date` DESC
 		LIMIT 10
-	");
-	
-	while ($row = myF($select)) {
-		
+	";
+
+	while ($row = myF($query)) {
+
 		$participateReplacementArray[] = array(
 			"par.date" => date($CONF["LOCALE_HEADER_DATE"], $row["date"]),
 			"par.username" => _fnc("user", $row["user"], "username"),
@@ -184,12 +184,12 @@
 			"par.mainpicture" => _fnc("user", $row["user"], "mainpicture")
 		);
 	}
-	
-	if (isset($participateReplacementArray)) {	
+
+	if (isset($participateReplacementArray)) {
 		$tpl -> Loop("participateTopicsList", $participateReplacementArray);
 	}
-	
-	
+
+
 	$tpl -> Flush();
-	
+
 ?>
